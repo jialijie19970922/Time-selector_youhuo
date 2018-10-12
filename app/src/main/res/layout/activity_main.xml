@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.pickerview.jlj.myapplication.MainActivity">
+
+    <EditText
+        android:id="@+id/my_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:hint="12312312"
+        android:windowSoftInputMode="adjustUnspecified|stateHidden"
+        />
+
+    <EditText
+        android:id="@+id/my_edit_keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/my_edit_text"
+        android:background="#ffffff"
+        android:hint="123" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff">
+
+        <com.pickerview.jlj.myapplication.mypickerview.PickerView
+            android:id="@+id/hour_pv"
+            android:layout_width="80dp"
+            android:layout_height="360dp" />
+
+        <TextView
+            android:id="@+id/hour_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/hour_pv"
+            android:text="●"
+            android:textColor="@color/circular_color"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <com.pickerview.jlj.myapplication.mypickerview.PickerView
+            android:id="@+id/minute_pv"
+            android:layout_width="80dp"
+            android:layout_height="360dp"
+            android:layout_toRightOf="@id/hour_tv" />
+
+        <TextView
+            android:id="@+id/minute_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/minute_pv"
+            android:text="●"
+            android:textColor="@color/circular_color"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <com.pickerview.jlj.myapplication.mypickerview.PickerView
+            android:id="@+id/second_pv"
+            android:layout_width="80dp"
+            android:layout_height="360dp"
+            android:layout_toRightOf="@id/minute_tv" />
+    </RelativeLayout>
+
+</RelativeLayout>
